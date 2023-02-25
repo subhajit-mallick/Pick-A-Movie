@@ -1,4 +1,3 @@
-from config import API_KEY
 import streamlit as st
 import pickle
 import pandas as pd
@@ -6,7 +5,7 @@ import time
 import json
 import requests
 
-api_key = API_KEY
+api_key = st.secrets.API_KEY
 
 movie_dict = pickle.load(open('movies.pkl', 'rb'))
 movies_df = pd.DataFrame(movie_dict)
