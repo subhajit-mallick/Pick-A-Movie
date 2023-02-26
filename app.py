@@ -12,7 +12,7 @@ movies_df = pd.DataFrame(movie_dict)
 similarity_matrix = pickle.load(open('similarity.pkl', 'rb'))
 
 st.set_page_config(
-    page_title="TwoCents'",
+    page_title="Pick-A-Movie",
     page_icon="📺",
     layout="centered",
     initial_sidebar_state="auto",
@@ -43,7 +43,7 @@ def recommend(movie, is_lang_pref):
     return [(movies_df.iloc[i[0]].title, movies_df.iloc[i[0]].poster_path) for i in top_movies]
 
 
-st.title("Two Cents'")
+st.title("Pick-A-Movie")
 
 st.markdown("""
 <link rel="preconnect" href="https://fonts.googleapis.com">
